@@ -1,0 +1,56 @@
+# Dehradun Traffic Data
+# Format: VehicleID  Road(use_underscores_for_spaces)  SpeedKmh
+#
+# Road names use underscores instead of spaces
+# Example: Clock_Tower-Paltan_Bazaar means "Clock Tower - Paltan Bazaar"
+
+V001  ISBT_Dehradun-Clock_Tower  52
+V002  ISBT_Dehradun-Clock_Tower  48
+V003  ISBT_Dehradun-Clock_Tower  20
+V004  ISBT_Dehradun-Clock_Tower  18
+V005  ISBT_Dehradun-Clock_Tower  15
+V006  Clock_Tower-Paltan_Bazaar  55
+V007  Clock_Tower-Paltan_Bazaar  50
+V008  Clock_Tower-Paltan_Bazaar  22
+V009  Clock_Tower-Paltan_Bazaar  19
+V010  Paltan_Bazaar-Dehradun_Railway_Station  58
+V011  Paltan_Bazaar-Dehradun_Railway_Station  55
+V012  Paltan_Bazaar-Dehradun_Railway_Station  25
+V013  Paltan_Bazaar-Dehradun_Railway_Station  20
+V014  Paltan_Bazaar-Pacific_Mall  60
+V015  Paltan_Bazaar-Pacific_Mall  55
+V016  ISBT_Dehradun-Dehradun_Railway_Station  45
+V017  ISBT_Dehradun-Dehradun_Railway_Station  40
+V018  ISBT_Dehradun-Paltan_Bazaar  28
+V019  ISBT_Dehradun-Paltan_Bazaar  22
+V020  ISBT_Dehradun-Paltan_Bazaar  18
+V021  Clock_Tower-FRI  65
+V022  Clock_Tower-FRI  60
+V023  Clock_Tower-Rispana_Bridge  55
+V024  Clock_Tower-Rispana_Bridge  50
+V025  Dehradun_Railway_Station-Balliwala_Chowk  35
+V026  Dehradun_Railway_Station-Balliwala_Chowk  30
+V027  Dehradun_Railway_Station-Balliwala_Chowk  25
+V028  Dehradun_Railway_Station-Prem_Nagar  60
+V029  Dehradun_Railway_Station-Prem_Nagar  55
+V030  Jolly_Grant_Airport-ISBT_Dehradun  75
+V031  Jolly_Grant_Airport-ISBT_Dehradun  70
+V032  Jolly_Grant_Airport-Balliwala_Chowk  72
+V033  Pacific_Mall-Sahastradhara  65
+V034  Pacific_Mall-Sahastradhara  60
+V035  Pacific_Mall-Mussoorie_Road  58
+V036  FRI-Mussoorie_Road  68
+V037  FRI-Sahastradhara  62
+V038  Sahastradhara-Mussoorie_Road  70
+V039  Rispana_Bridge-Balliwala_Chowk  18
+V040  Rispana_Bridge-Balliwala_Chowk  14
+V041  Rispana_Bridge-Balliwala_Chowk  20
+V042  Rispana_Bridge-Clement_Town  55
+V043  Balliwala_Chowk-Prem_Nagar  40
+V044  Balliwala_Chowk-Prem_Nagar  35
+V045  Balliwala_Chowk-Clement_Town  48
+V046  Prem_Nagar-Clement_Town  60
+V047  Prem_Nagar-Clement_Town  58
+V048  City_Airport-General_Hospital  22
+V049  ISBT_Dehradun-Clock_Tower  12
+V050  Rispana_Bridge-Balliwala_Chowk  10
