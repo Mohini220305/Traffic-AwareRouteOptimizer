@@ -18,14 +18,14 @@ public class TrafficApp extends JFrame {
 
     public TrafficApp() {
 
-        setTitle("Dehradun Traffic Analyser");
+        setTitle("Traffic Based Route Optimizer");
         setSize(680, 620);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout(8, 8));
 
         // ---- TOP: title ----
-        JLabel titleLabel = new JLabel("Dehradun Traffic Analyser", JLabel.CENTER);
+        JLabel titleLabel = new JLabel("Traffic Based Route Optimizer", JLabel.CENTER);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
         titleLabel.setBorder(BorderFactory.createEmptyBorder(10, 0, 6, 0));
         add(titleLabel, BorderLayout.NORTH);
@@ -86,6 +86,16 @@ public class TrafficApp extends JFrame {
         });
     }
 
+    boolean isSamePath(List<String> p1, List<String> p2) {
+        if (p1 == null || p2 == null) return false;
+        if (p1.size() != p2.size()) return false;
+
+        for (int i = 0; i < p1.size(); i++) {
+            if (!p1.get(i).equals(p2.get(i))) return false;
+        }
+        return true;
+    }
+
     void loadVehiclesOnStart() {
         File file = new File("data/vehicles.txt");
 
@@ -112,8 +122,10 @@ public class TrafficApp extends JFrame {
     }
 
     void showAllPaths() {
+
         String from = (String) fromBox.getSelectedItem();
         String to   = (String) toBox.getSelectedItem();
+        RouteResult bestTrafficPath = Algorithms.dijkstra(graph, from, to);
 
         if (from == null || to == null || from.equals(to)) {
             JOptionPane.showMessageDialog(this,
@@ -150,6 +162,20 @@ public class TrafficApp extends JFrame {
             pathBox.setLayout(new BoxLayout(pathBox, BoxLayout.Y_AXIS));
             pathBox.setBorder(BorderFactory.createTitledBorder(
                     "Path " + (p + 1) + "   |   " + route.distanceKm + " km   |   " + route.path.size() + " stops"));
+
+            if (p == 0) {
+                JLabel bestLabel = new JLabel("  ★ Shortest Distance");
+                bestLabel.setFont(new Font("Arial", Font.BOLD, 11));
+                bestLabel.setForeground(new Color(0, 100, 180));
+                pathBox.add(bestLabel);
+            }
+
+            if (isSamePath(route.path, bestTrafficPath.path)) {
+                JLabel bestTraffic = new JLabel("  ★ Best Traffic Route");
+                bestTraffic.setFont(new Font("Arial", Font.BOLD, 11));
+                bestTraffic.setForeground(new Color(180, 0, 120)); // purple
+                pathBox.add(bestTraffic);
+            }
 
             // determine overall worst traffic on this path
             String worstTraffic = "Clear";

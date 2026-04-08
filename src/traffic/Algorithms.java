@@ -4,6 +4,9 @@ import java.util.*;
 
 public class Algorithms {
 
+    private static final int MAX_PATHS = 20;
+    private static final int MAX_DEPTH = 6;
+
     public static RouteResult dijkstra(Graph g, String start, String end) {
         List<String> locs = new ArrayList<>(g.getAllLocations());
         Map<String, Integer> idx = new HashMap<>();
@@ -100,13 +103,20 @@ public class Algorithms {
     private static void findAllPaths(Graph g, String current, String end,
                                      List<String> currentPath, Set<String> visited,
                                      List<RouteResult> results) {
+
+        if (results.size() >= MAX_PATHS) return;
+
+        if (currentPath.size() > MAX_DEPTH) return;
+
         if (current.equals(end)) {
             List<String> pathCopy = new ArrayList<>(currentPath);
             int dist = 0;
+
             for (int i = 0; i < pathCopy.size() - 1; i++) {
                 Graph.Edge e = g.getEdge(pathCopy.get(i), pathCopy.get(i + 1));
                 if (e != null) dist += e.distanceKm;
             }
+
             results.add(new RouteResult(pathCopy, dist, "Path " + (results.size() + 1)));
             return;
         }
