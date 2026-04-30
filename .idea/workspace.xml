@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7974540-0628-4d28-a8fa-86a658d12029" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="a7974540-0628-4d28-a8fa-86a658d12029" name="Changes" comment="git commit -m &quot;Improve routing logic: traffic handling, path limits, and best route highlight&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/vehicles.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/vehicles.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/traffic/Algorithms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/traffic/Algorithms.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/traffic/TrafficApp$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/traffic/TrafficApp$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/traffic/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/traffic/Graph.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/traffic/TrafficApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/traffic/TrafficApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/traffic/Algorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/traffic/Algorithms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/traffic/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/traffic/Graph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/traffic/TrafficApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/traffic/TrafficApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/traffic/VehicleLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/traffic/VehicleLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,21 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Mohini220305&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mohini220305/TrafficAnalysisSystem.git&quot;,
+    &quot;accountId&quot;: &quot;03143b23-fef1-4e54-9401-0aa121396c60&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -40,7 +55,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp/IdeaProjects/TrafficAnalyzer&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp/IdeaProjects/TrafficAwareRouteOptimizer&quot;
   }
 }</component>
   <component name="RunManager">
@@ -71,6 +86,19 @@
       <option name="presentableId" value="Default" />
       <updated>1774087897860</updated>
     </task>
+    <task id="LOCAL-00001" summary="git commit -m &quot;Improve routing logic: traffic handling, path limits, and best route highlight&quot;">
+      <option name="closed" value="true" />
+      <created>1775664351593</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1775664351594</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="git commit -m &quot;Improve routing logic: traffic handling, path limits, and best route highlight&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="git commit -m &quot;Improve routing logic: traffic handling, path limits, and best route highlight&quot;" />
   </component>
 </project>

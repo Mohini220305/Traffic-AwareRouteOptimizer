@@ -83,8 +83,9 @@ public class Algorithms {
         return build(g, prev, start, end, "DFS");
     }
 
-    // finds every simple path (no repeated nodes) using backtracking DFS
     public static List<RouteResult> allPaths(Graph g, String start, String end) {
+        if (start.equals(end)) return Collections.emptyList();
+
         List<RouteResult> results = new ArrayList<>();
         List<String> currentPath = new ArrayList<>();
         Set<String> visited = new HashSet<>();
@@ -94,7 +95,6 @@ public class Algorithms {
 
         findAllPaths(g, start, end, currentPath, visited, results);
 
-        // sort by total distance so shortest shows first
         results.sort(Comparator.comparingInt(r -> r.distanceKm));
 
         return results;

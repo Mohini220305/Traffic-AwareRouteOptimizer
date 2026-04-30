@@ -55,10 +55,15 @@ public class Graph {
     public void addVehicle(String road, double speed) {
         Edge e = edges.get(road);
         if (e == null) {
-            for (String key : edges.keySet()) {
-                if (key.equalsIgnoreCase(road)) { e = edges.get(key); break; }
+            String normalised = road.toLowerCase();
+            for (Map.Entry<String, Edge> entry : edges.entrySet()) {
+                if (entry.getKey().toLowerCase().equals(normalised)) {
+                    e = entry.getValue();
+                    break;
+                }
             }
         }
+
         if (e != null) {
             e.vehicleCount++;
             e.totalSpeed += speed;
@@ -72,9 +77,9 @@ public class Graph {
         for (Edge e : edges.values()) { e.vehicleCount = 0; e.totalSpeed = 0; }
     }
 
-    public List<Edge>       getNeighbors(String loc)   { return adj.getOrDefault(loc, Collections.emptyList()); }
-    public Set<String>      getAllLocations()           { return adj.keySet(); }
-    public Collection<Edge> getAllEdges()               { return edges.values(); }
+    public List<Edge>       getNeighbors(String loc)    { return adj.getOrDefault(loc, Collections.emptyList()); }
+    public Set<String>      getAllLocations()            { return adj.keySet(); }
+    public Collection<Edge> getAllEdges()                { return edges.values(); }
     public Edge             getEdge(String a, String b) { return edges.get(a + "|" + b); }
     public boolean          hasLocation(String n)       { return adj.containsKey(n); }
 }

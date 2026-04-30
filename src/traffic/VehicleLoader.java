@@ -10,7 +10,7 @@ public class VehicleLoader {
         public final List<String>  errors;
         public Result(List<Vehicle> v, List<String> e) { vehicles = v; errors = e; }
     }
-
+    
     public static Result load(File file) {
         List<Vehicle> vehicles = new ArrayList<>();
         List<String>  errors   = new ArrayList<>();
